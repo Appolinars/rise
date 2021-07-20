@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
       crossFade: true,
     },
     autoplay: {
-      delay: 2000,
+      delay: 5000,
       disableOnInteraction: false,
     },
   });
