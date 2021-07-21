@@ -1,6 +1,15 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
+  // Burger
+
+  let menuIcon = document.querySelector(".burger");
+  let nav = document.querySelector("nav");
+
+  menuIcon.addEventListener("click", function () {
+    nav.classList.toggle("active");
+    menuIcon.classList.toggle("active");
+  });
 
   // Modal
 
@@ -42,13 +51,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
   modal(".explore__video-box", ".modal__video-close", ".modal__video", ".modal__video-content");
 
+  // Works mobile accordion
+
+  let worksBtns = document.querySelectorAll(".accordion__title");
+
+  worksBtns.forEach((workBtn) => {
+    workBtn.addEventListener("click", () => {
+      worksBtns.forEach((btn) => {
+        if (workBtn !== btn) {
+          btn.classList.remove("active");
+        }
+      });
+      workBtn.classList.toggle("active");
+    });
+  });
+
   // Sliders
 
-  let servicesSwiper = new Swiper(".brands__slider", {
+  let brandsSwiper = new Swiper(".brands__slider", {
     freeMode: true,
     watchOverflow: false,
     observer: true,
     observeParents: true,
+    slidesPerView: 2,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
     },
@@ -56,19 +87,18 @@ document.addEventListener('DOMContentLoaded', function () {
       991: {
         watchOverflow: true,
         slidesPerView: 4,
-        spaceBetween: 20,
       },
     },
   });
 
-  var worksNav = new Swiper(".works__nav", {
+  let worksNav = new Swiper(".works__nav", {
     slidesPerView: "auto",
     freeMode: true,
     direction: "vertical",
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
   });
-  var worksContent = new Swiper(".works__content", {
+  let worksContent = new Swiper(".works__content", {
     thumbs: {
       swiper: worksNav,
     },
@@ -82,4 +112,27 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
+  let reviewsSlider = new Swiper(".reviews__slider", {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".reviews__button-next",
+      prevEl: ".reviews__button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
 });

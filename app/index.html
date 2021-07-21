@@ -15,7 +15,7 @@
     <header class="header">
         <div class="header__inner container">
             <a class="header__logo" href="#">
-                <img src="images/logo.png" alt="Rise" />
+                <img src="images/logo.svg" alt="Rise" />
             </a>
             <nav class="nav">
                 <ul class="nav__list">
@@ -30,6 +30,11 @@
                     </li>
                 </ul>
             </nav>
+            <button class="burger">
+                <span class="burger__line burger__line--1"></span>
+                <span class="burger__line burger__line--2"></span>
+                <span class="burger__line burger__line--3"></span>
+            </button>
         </div>
     </header>
 
@@ -40,9 +45,9 @@
                 <div class="intro__content">
                     <h1 class="intro__title">
                         There is<img src="images/intro-avatar1.png" alt="Woman's avatar" />power<img
-                            src="images/intro-fire.png" title="Power" /><img src="images/intro-smile.png"
-                            title="Power" />in women coming together<img src="images/intro-avatar2.png"
-                            alt="Woman's avatar" />
+                            src="images/intro-fire.png" title="Power" class="intro__title-emoji" /><br /><img
+                            src="images/intro-smile.png" title="Power" class="intro__title-emoji" />in women coming
+                        together<img src="images/intro-avatar2.png" alt="Woman's avatar" />
                     </h1>
                     <p class="intro__text">
                         Rise is a supportive community of diverse professionals where we can unapologetically
@@ -64,15 +69,17 @@
                             src="images/explore-smile.png" alt="Smile" />Rise together.
                     </h2>
                 </div>
-                <a href="#" class="explore__video-box">
-                    <img src="images/explore-img.jpg" alt="Play video" class="explore__video" />
-                    <img class="explore__video-play" src="images/play-button.svg" alt="Play video" />
-                </a>
+                <div class="explore__content">
+                    <a href="#" class="explore__video-box">
+                        <img src="images/explore-img.jpg" alt="Play video" class="explore__video" />
+                        <img class="explore__video-play" src="images/play-button.svg" alt="Play video" />
+                    </a>
+                </div>
             </div>
         </section>
 
         <div class="modal__video modal">
-            <div class="modal__video-content modal__dialog bounceIn">
+            <div class="modal__video-content modal__dialog slideIn">
                 <div class="modal__video-close close_modal">+</div>
                 <iframe src="https://www.youtube.com/embed/XHOmBV4js_E" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -128,7 +135,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="extra partners__extra">
+                <div class="extra partners__extra" style="background-image: url(./images/partners-extra-bg.png);">
                     <h3 class="extra__title">Looking for Rising Talent?</h3>
                     <button class="extra__btn">WORK WITH US</button>
                 </div>
@@ -162,7 +169,7 @@
                 </h2>
                 <a class="btn-transparent" href="#">let’s rise</a>
             </div>
-            <div class="carousel__img" style="background-image: url(./images/carouse-img.png)"></div>
+            <div class="carousel__img" style="background-image: url(./images/carousel-img.png)"></div>
         </section>
 
         <section class="join">
@@ -196,15 +203,17 @@
                     </div>
                 </div>
             </div>
-            <div class="extra brands__extra">
+            <div class="extra brands__extra" style="background-image: url(./images/brands-extra-bg.png);">
                 <h3 class="extra__title">Looking for Rising Talent?</h3>
                 <button class="extra__btn">WORK WITH US</button>
             </div>
         </section>
 
-        <section class="works" style="background-image: url(./images/works-bg.jpg);">
+        <section class="works" style="background-image: url(./images/works-bg.jpg)">
             <div class="container">
-                <h2 class="works__title"><img src="images/rocket.png" alt="How it works">How it works</h2>
+                <h2 class="works__title">
+                    <img src="images/rocket.png" alt="How it works" />How it works
+                </h2>
                 <div class="works__desktop">
                     <div thumbsSlider="" class="swiper-container works__nav">
                         <div class="swiper-wrapper">
@@ -263,7 +272,9 @@
                     <div class="swiper-container works__content">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <h3 class="works__content-title">Take Our 2-Minute Quiz to Share What’s Important to You</h3>
+                                <h3 class="works__content-title">
+                                    Take Our 2-Minute Quiz to Share What’s Important to You
+                                </h3>
                                 <img src="images/works/works-slide1.png" alt="How it works" />
                             </div>
                             <div class="swiper-slide">
@@ -271,11 +282,15 @@
                                 <img src="images/works/works-slide2.png" alt="How it works" />
                             </div>
                             <div class="swiper-slide">
-                                <h3 class="works__content-title">Accept Invites from Companies that match your values</h3>
+                                <h3 class="works__content-title">
+                                    Accept Invites from Companies that match your values
+                                </h3>
                                 <img src="images/works/works-slide3.png" alt="How it works" />
                             </div>
                             <div class="swiper-slide">
-                                <h3 class="works__content-title">Build Meaningful Relationships and Grow Your Career</h3>
+                                <h3 class="works__content-title">
+                                    Build Meaningful Relationships and Grow Your Career
+                                </h3>
                                 <img src="images/works/works-slide4.png" alt="How it works" />
                             </div>
                             <div class="swiper-slide">
@@ -285,36 +300,203 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="works__mobile">
+                    <ul class="accordion">
+                        <li class="accordion__item">
+                            <button class="accordion__title active">Choose Values <span class="works__nav-arrow">
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 13l6-6-6-6" stroke="#31236B" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span></button>
+                            <div class="accordion__content">
+                                <h3 class="works__content-title">
+                                    Take Our 2-Minute Quiz to Share What’s Important to You
+                                </h3>
+                                <img src="images/works/works-slide1.png" alt="How it works" />
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <button class="accordion__title">Explore Companies <span class="works__nav-arrow">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13l6-6-6-6" stroke="#31236B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span></button>
+                            <div class="accordion__content">
+                                <h3 class="works__content-title">Find Companies That Match Your Values</h3>
+                                <img src="images/works/works-slide2.png" alt="How it works" />
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <button class="accordion__title">Accept Invites <span class="works__nav-arrow">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13l6-6-6-6" stroke="#31236B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span></button>
+                            <div class="accordion__content">
+                                <h3 class="works__content-title">
+                                    Accept Invites from Companies that match your values
+                                </h3>
+                                <img src="images/works/works-slide3.png" alt="How it works" />
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <button class="accordion__title">Build Relationships <span class="works__nav-arrow">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13l6-6-6-6" stroke="#31236B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span></button>
+                            <div class="accordion__content">
+                                <h3 class="works__content-title">
+                                    Build Meaningful Relationships and Grow Your Career
+                                </h3>
+                                <img src="images/works/works-slide4.png" alt="How it works" />
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <button class="accordion__title">Rise Together <span class="works__nav-arrow">
+                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 13l6-6-6-6" stroke="#31236B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span></button>
+                            <div class="accordion__content">
+                                <h3 class="works__content-title">Rise Together and Make Friends Along the Way</h3>
+                                <img src="images/works/works-slide5.png" alt="How it works" />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-
-        <!-- <section class="reviews">
+        
+        <section class="reviews">
             <div class="reviews__inner container">
                 <div class="swiper-container reviews__slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide reviews__slide">
                             <div class="reviews__author">
                                 <div class="reviews__avatar">
-                                    <img src="" alt="">
+                                    <img src="images/reviews/reviews-avatar-1.png" alt="Aspen Franci" />
                                 </div>
                                 <p class="reviews__name">Aspen Franci</p>
                                 <p class="reviews__prof">Lead UI/UX designer, Playrix</p>
                             </div>
                             <p class="reviews__text">
-                                At Rise, we are committed to creating an <span class="reviews__text-accent" style="color: #58C6CF;">inclusive workplace</span> that values diversity. We firmly believe that companies diverse in age, gender identity, race, sexual orientation,
-                                ethnicity, and perspective <span class="reviews__text-accent" style="color: #58C6CF;">are better</span> because of it.
+                                At Rise, we are committed to creating an
+                                <span class="reviews__text-accent" style="color: #58c6cf">inclusive workplace</span>
+                                that values diversity. We firmly believe that companies diverse in age, gender
+                                identity, race, sexual orientation, ethnicity, and perspective
+                                <span class="reviews__text-accent" style="color: #58c6cf">are better</span>
+                                because of it.
                             </p>
-                            <img src="" alt="Rise" class="reviews__decor">
+                            <img src="images/reviews/reviews-decor-1.svg" alt="Rise" class="reviews__decor" />
                         </div>
-                        
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__author">
+                                <div class="reviews__avatar">
+                                    <img src="images/reviews/reviews-avatar-2.png" alt="Maria Westervelt" />
+                                </div>
+                                <p class="reviews__name">Maria Westervelt</p>
+                                <p class="reviews__prof">Art-director, Gemini</p>
+                            </div>
+                            <p class="reviews__text">
+                                At Rise, we are committed to creating an
+                                <span class="reviews__text-accent" style="color: #ea7f4a">inclusive workplace</span>
+                                that values diversity. We firmly believe that companies diverse in age, gender
+                                identity, race, sexual orientation, ethnicity, and perspective
+                                <span class="reviews__text-accent" style="color: #ea7f4a">are better</span>
+                                because of it.
+                            </p>
+                            <img src="images/reviews/reviews-decor-2.svg" alt="Rise" class="reviews__decor" />
+                        </div>
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__author">
+                                <div class="reviews__avatar">
+                                    <img src="images/reviews/reviews-avatar-3.png" alt="Maria Westervelt" />
+                                </div>
+                                <p class="reviews__name">Maria Westervelt</p>
+                                <p class="reviews__prof">Art-director, Gemini</p>
+                            </div>
+                            <p class="reviews__text">
+                                At Rise, we are committed to creating an
+                                <span class="reviews__text-accent" style="color: #48c085">inclusive workplace</span>
+                                that values diversity. We firmly believe that companies diverse in age, gender
+                                identity, race, sexual orientation, ethnicity, and perspective
+                                <span class="reviews__text-accent" style="color: #48c085">are better</span>
+                                because of it.
+                            </p>
+                            <img src="images/reviews/reviews-decor-3.svg" alt="Rise" class="reviews__decor" />
+                        </div>
+                        <div class="swiper-slide reviews__slide">
+                            <div class="reviews__author">
+                                <div class="reviews__avatar">
+                                    <img src="images/reviews/reviews-avatar-4.png" alt="Maria Westervelt" />
+                                </div>
+                                <p class="reviews__name">Maria Westervelt</p>
+                                <p class="reviews__prof">Art-director, Gemini</p>
+                            </div>
+                            <p class="reviews__text">
+                                At Rise, we are committed to creating an
+                                <span class="reviews__text-accent" style="color: #514dad">inclusive workplace</span>
+                                that values diversity. We firmly believe that companies diverse in age, gender
+                                identity, race, sexual orientation, ethnicity, and perspective
+                                <span class="reviews__text-accent" style="color: #514dad">are better</span>
+                                because of it.
+                            </p>
+                            <img src="images/reviews/reviews-decor-4.svg" alt="Rise" class="reviews__decor" />
+                        </div>
+                    </div>
+                    <div class="reviews__bottom">
+                        <button class="reviews__button reviews__button-prev">
+                            <img src="images/arrow-slider-left.svg" alt="Prev">
+                        </button>
+                        <div class="swiper-pagination reviews__pagination"></div>
+                        <button class="reviews__button reviews__button-next">
+                            <img src="images/arrow-slider-right.svg" alt="Next">
+                        </button>
                     </div>
                 </div>
+                <div class="extra reviews__extra" style="background-image: url(./images/reviews-extra-bg.png);">
+                    <h3 class="extra__title">Are you ready to Rise?</h3>
+                    <button class="extra__btn">let’s get started</button>
+                    <img src="images/reviews-extra-decor.png" alt="Join us" class="reviews__extra-decor">
+                </div>
             </div>
-        </section> -->
-
+        </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__item">
+                <img src="images/logo-white.svg" alt="Rise" class="footer__logo">
+                <p class="footer__info"><a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a></p>
+                <p class="footer__copy">&copy; 2021 Work Rise LLC. All rights reserved. Proudly made in NYC.</p>
+            </div>
+            <div class="footer__item">
+                <p class="footer__title">CONNECT</p>
+                <div class="social">
+                    <a href="#" class="social__link">
+                        <img src="images/social/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="images/social/linkedin.svg" alt="Linkedin">
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="images/social/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__item">
+                <p class="footer__title">STAY IN TOUCH</p>
+                <form class="footer__form">
+                    <input type="text" class="footer__input" placeholder="Enter your e-mail">
+                    <button class="btn" type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.min.js"></script>
 </body>

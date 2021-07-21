@@ -6,6 +6,9 @@ body {
     font-size: 24px;
     min-width: 36px;
 
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 
@@ -125,6 +128,7 @@ main {
         line-height: 19px;
         text-transform: uppercase;
         border: none;
+        border-radius: 8px;
         will-change: transform;
         transition: transform .4s;
 
@@ -140,4 +144,5 @@ main {
     padding: 6px 24px;
     border-radius: 40px;
     margin: 0 10px;
+    white-space: nowrap;
 }

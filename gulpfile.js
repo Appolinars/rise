@@ -88,5 +88,5 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, build);
 exports.default = parallel(styles, scripts, browsersync, watching)
