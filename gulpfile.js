@@ -19,19 +19,19 @@ function browsersync() {
 
 function images() {
     return src('app/images/**/*')
-        .pipe(imagemin(
-            [
-                imagemin.gifsicle({ interlaced: true }),
-                imagemin.mozjpeg({ quality: 75, progressive: true }),
-                imagemin.optipng({ optimizationLevel: 5 }),
-                imagemin.svgo({
-                    plugins: [
-                        { removeViewBox: true },
-                        { cleanupIDs: false }
-                    ]
-                })
-            ]
-        ))
+        // .pipe(imagemin(
+        //     [
+        //         imagemin.gifsicle({ interlaced: true }),
+        //         imagemin.mozjpeg({ quality: 75, progressive: true }),
+        //         imagemin.optipng({ optimizationLevel: 5 }),
+        //         imagemin.svgo({
+        //             plugins: [
+        //                 { removeViewBox: true },
+        //                 { cleanupIDs: false }
+        //             ]
+        //         })
+        //     ]
+        // ))
         .pipe(dest('dist/images'))
 }
 
@@ -88,5 +88,5 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, build);
+exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, watching)
