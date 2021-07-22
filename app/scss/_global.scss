@@ -24,6 +24,7 @@ main {
 }
 
 .btn {
+    display: inline-block;
     padding: 12px 16px;
     background: $color-accent;
     text-transform: uppercase;
@@ -119,6 +120,7 @@ main {
     }
 
     &__btn {
+        display: inline-block;
         color: $color-accent;
         background: #fff;
         min-width: 225px;

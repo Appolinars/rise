@@ -50,8 +50,9 @@
     }
 
     .join__box {
-        padding: 30px;
+        padding: 25px 25px 25px 70px;
         right: 5px;
+        bottom: 60px;
     }
 
     .join__title {
@@ -59,9 +60,6 @@
         font-size: 40px;
         line-height: 55px;
 
-        &::before {
-            display: none;
-        }
     }
 
     .join__text {
@@ -69,8 +67,12 @@
     }
 
     .works__title {
+        
         img {
-            display: none;
+            transform: none;
+            top: -45px;
+            left: 0;
+            max-width: 40px;
         }
     }
 
@@ -160,7 +162,7 @@
     }
 
     .about {
-        padding: 60px 0;
+        padding: 60px 0 90px;
     }
 
     .about__content {
@@ -178,7 +180,10 @@
     }
 
     .join__box {
-        padding: 15px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
     }
 
     .join__title {
@@ -203,7 +208,7 @@
     }
 
     .works {
-        padding: 70px 0;
+        padding: 100px 0 70px;
     }
 
     .works__title {
@@ -245,21 +250,31 @@
     }
 
     .footer {
-        padding: 40px 0 20px;
+        padding: 50px 0 20px;
     }
 
     .footer__inner {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .footer__item {
         margin-right: 0;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
 
     }
 
     .footer__title {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    .footer__bottom {
+        text-align: center;
+    }
+
+    .footer__info {
+        margin: 0 auto;
     }
 }
 
@@ -327,17 +342,39 @@
         width: 40px;
     }
 
-    .intro {
-        background: transparent;
-        padding: 100px 0 30px;
+    .intro__star {
+        width: 770px;
+        height: 770px;
+        top: -270px;
     }
 
-    .intro__star {
-        display: none;
+    .intro__title {
+        margin: 0 auto 215px;
+    }
+
+    .intro__text {
+        color: #fff;
     }
 
     .intro__btn {
-        margin-bottom: 0;
+        background: #fff;
+        color: $color-accent;
+        margin-bottom: 50px;
+
+        &:hover {
+            background: #fff;
+        }
+    }
+
+    .intro__arrow {
+        display: flex;
+        width: 50px;
+        height: 50px;
+
+        img {
+            max-height: 28px;
+            animation: none;
+        }
     }
 
     .heading__title {
@@ -351,7 +388,7 @@
     }
 
     .partners__list {
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
 
     .partners__item {
@@ -370,7 +407,7 @@
     }
 
     .extra {
-        padding: 25px 10px;
+        padding: 50px 10px;
     }
 
     .extra__title {
@@ -416,19 +453,23 @@
     }
 
     .join__inner {
-        position: static;
+        position: relative;
+        left: auto;
+        top: auto;
         transform: none;
-        margin-top: 15px;
+        margin-top: -25px;
+        z-index: 1;
     }
 
     .join__box {
         position: static;
         width: 100%;
         max-width: none;
+        transform: none;
     }
 
     .brands {
-        padding: 40px 15px;
+        padding: 55px 15px 70px;
     }
 
     .accordion__title {
@@ -477,7 +518,7 @@
     }
 
     .reviews__extra {
-        margin-top: 40px;
+        margin-top: 60px;
     }
 
     .reviews__extra {
@@ -496,10 +537,25 @@
         font-size: 16px;
     }
 
+    .btn {
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    .intro {
+        padding: 100px 0 30px;
+    }
+
+    .intro__star {
+        width: 570px;
+        height: 570px;
+        top: -170px;
+    }
+
     .intro__title {
         font-size: 31px;
         line-height: 45px;
-        margin-bottom: 25px;
+        margin-bottom: 145px;
 
         img {
             max-width: 60px;
@@ -513,11 +569,27 @@
     }
 
     .explore {
-        padding: 50px 0;
+        padding: 70px 0;
     }
 
     .explore__video-play {
         width: 50px;
+    }
+
+    .join__box {
+        padding: 25px 25px 25px 40px;
+    }
+
+    .join__title {
+        font-size: 24px;
+        line-height: 35px;
+
+        &::before {
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            left: -35px;
+        }
     }
 
     .partners__item {
@@ -526,17 +598,17 @@
         }
     }
 
+    .carousel__heading {
+        padding: 0 5px;
+    }
+
     .extra__btn {
         padding: 10px 5px;
         min-width: 180px;
     }
 
-    .works {
-        padding: 40px 0;
-    }
-
     .reviews {
-        padding: 60px 0;
+        padding: 80px 0;
     }
 
     .reviews__bottom {
@@ -552,13 +624,11 @@
     }
 
     .footer__form {
-        flex-direction: column;
-        align-items: flex-start;
+       
     }
 
     .footer__input {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 85%;
+        margin-right: 5px;
+        width: 70%;
     }
 }

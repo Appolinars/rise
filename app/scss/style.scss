@@ -402,6 +402,7 @@
 
     &__text {
         margin-bottom: 35px;
+        font-weight: 400;
     }
 
     &__text-accent {
@@ -473,7 +474,7 @@
 .join {
 
     position: relative;
-    padding: 40px 0;
+    padding: 80px 0 50px;
 
     &__img {
         width: 100%;
@@ -496,7 +497,7 @@
         background-position: center center;
         background-size: cover;
         position: absolute;
-        bottom: 50px;
+        bottom: 70px;
         right: 0;
     }
 
@@ -511,6 +512,7 @@
             width: 56px;
             height: 56px;
             background: url(../images/lightning.png) center no-repeat;
+            background-size: contain;
             position: absolute;
             top: 10px;
             left: -70px;
@@ -519,6 +521,7 @@
 
     &__text {
         margin-bottom: 35px;
+        font-weight: 400;
     }
 
 }
@@ -615,6 +618,7 @@
         position: relative;
         transition: text-shadow .3s, color .3s;
         cursor: pointer;
+        font-weight: 400;
 
         &::before {
             content: '';
@@ -704,6 +708,7 @@
     width: 80%;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    font-weight: 400;
     position: relative;
     transition: text-shadow .3s,
     color .3s;
@@ -912,13 +917,13 @@
         }
     }
 
-    &__logo {
-        margin-bottom: 35px;
+    &__bottom {
+        color: #fff;
+        font-weight: 400;
+        margin-top: 10px;
     }
 
     &__info {
-        color: #fff;
-        font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         max-width: 450px;
@@ -976,6 +981,7 @@
 
     display: flex;
     align-items: center;
+    padding-top: 8px;
 
     &__link {
         margin-right: 18px;
