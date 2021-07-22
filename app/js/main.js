@@ -68,13 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Sliders
 
+  let brandsItems = document.querySelectorAll(".brands__slide");
+
   let brandsSwiper = new Swiper(".brands__slider", {
     freeMode: true,
-    watchOverflow: false,
     observer: true,
     observeParents: true,
     slidesPerView: 2,
-    loop: true,
+    loop: brandsItems.length > 4,
+    watchOverflow: true,
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
@@ -85,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       991: {
-        watchOverflow: true,
         slidesPerView: 4,
       },
     },
